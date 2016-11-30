@@ -21,8 +21,11 @@ export class DashboardComponent {
     this.feeds$ = store.select('feed');
 
     this.form = fb.group({
-      text: ['', Validators.required],
-      name: ['', Validators.required]
+      text: ['Congratulations ALS, you just sent an email with Mailgun!', Validators.required],
+      name: ['nameMachinTruc', Validators.required],
+      from: ['Mailgun Sandbox <postmaster@sandbox41db17f981b345018e03f5b1dbc281fa.mailgun.org>', Validators.required],
+      to: ['ALS <tyvain@gmail.com>', Validators.required],
+      subject: ['Hello!', Validators.required]
     });
 
   }

@@ -4,13 +4,11 @@ import * as uuid from 'node-uuid';
 const feedRouter: Router = Router();
 
 feedRouter.post('/', (request: Request, response: Response) => {
-
   response.json({
     id: uuid.v4(),
     text: request.body.text,
     name: request.body.name
   });
-
 });
 
 feedRouter.post('/:id/comment', (request: Request, response: Response) => {
